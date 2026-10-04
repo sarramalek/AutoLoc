@@ -3,6 +3,8 @@ package tn.esprit.tic.cce.autoloc.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -19,4 +21,10 @@ public class Agence {
     private String ville;
     private String adresse;
     private String telephone;
+
+    @OneToMany(mappedBy = "agence")
+    private List<Employe> employes;
+
+    @OneToMany(mappedBy = "agence")
+    private List<Vehicule> vehicules;
 }

@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Getter
@@ -23,5 +24,12 @@ public class Contrat {
     @Column(precision = 10, scale = 2)
     private BigDecimal montantTotal;
 
-    private Boolean valide;
+    private boolean valide;
+
+    @OneToOne
+    @JoinColumn(name = "id_reservation")
+    private Reservation reservation;
+
+    @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Paiement> paiements;
 }

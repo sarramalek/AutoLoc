@@ -3,6 +3,8 @@ package tn.esprit.tic.cce.autoloc.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -16,4 +18,7 @@ public class Equipement {
     private Long idEquipement;
 
     private String libelle;
+
+    @ManyToMany(mappedBy = "equipements")
+    private List<Vehicule> vehicules;
 }
