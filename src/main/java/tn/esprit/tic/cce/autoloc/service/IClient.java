@@ -1,13 +1,19 @@
+
 package tn.esprit.tic.cce.autoloc.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Client;
-
 import tn.esprit.tic.cce.autoloc.repository.ClientRepository;
+
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class IClient implements IClientService {
 
-    ClientRepository clientRepository ;
+    ClientRepository clientRepository;
+
     @Override
     public List<Client> retrieveAllClients() {
         return clientRepository.findAll();
@@ -15,19 +21,16 @@ public class IClient implements IClientService {
 
     @Override
     public Client addClient(Client c) {
-        //return null;
         return clientRepository.save(c);
     }
 
     @Override
     public Client updateClient(Client c) {
-        //return null;
         return clientRepository.save(c);
     }
 
     @Override
     public Client retrieveClient(Long idClient) {
-        //return null;
         return clientRepository.findById(idClient).orElse(null);
     }
 
@@ -38,7 +41,6 @@ public class IClient implements IClientService {
 
     @Override
     public List<Client> addClients(List<Client> clients) {
-        //return List.of();
-        return(List<Client>) clientRepository.saveAll(clients);
+        return clientRepository.saveAll(clients);
     }
 }

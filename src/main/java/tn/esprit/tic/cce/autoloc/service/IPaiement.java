@@ -2,10 +2,9 @@ package tn.esprit.tic.cce.autoloc.service;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Paiement;
 import tn.esprit.tic.cce.autoloc.repository.PaiementRepository;
-import tn.esprit.tic.cce.autoloc.service.IPaiementService;
 
 import java.util.List;
-
+@Service
 public class IPaiement implements IPaiementService {
     private final PaiementRepository paiementRepository;
 

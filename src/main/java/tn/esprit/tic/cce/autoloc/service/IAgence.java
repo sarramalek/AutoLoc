@@ -6,7 +6,7 @@ import tn.esprit.tic.cce.autoloc.domain.Agence;
 import tn.esprit.tic.cce.autoloc.repository.AgenceRepository;
 
 import java.util.List;
-
+@Service
 public class IAgence implements IAgenceService {
 
     private final AgenceRepository agenceRepository;

@@ -3,10 +3,9 @@ package tn.esprit.tic.cce.autoloc.service;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Equipement;
 import tn.esprit.tic.cce.autoloc.repository.EquipementRepository;
-import tn.esprit.tic.cce.autoloc.service.IEquipementService;
 
 import java.util.List;
-
+@Service
 public class IEquipement implements IEquipementService {
     private final EquipementRepository equipementRepository;
 

@@ -1,10 +1,10 @@
 package tn.esprit.tic.cce.autoloc.service;
+import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Vehicule;
-import tn.esprit.tic.cce.autoloc.repository.PaiementRepository;
 import tn.esprit.tic.cce.autoloc.repository.VehiculeRepository;
-import tn.esprit.tic.cce.autoloc.service.IVehiculeService;
 
 import java.util.List;
+@Service
 public class IVehicule implements IVehiculeService {
     private final VehiculeRepository vehiculeRepository;
 

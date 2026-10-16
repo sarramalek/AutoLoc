@@ -2,10 +2,9 @@ package tn.esprit.tic.cce.autoloc.service;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Maintenance;
 import tn.esprit.tic.cce.autoloc.repository.MaintenanceRepository;
-import tn.esprit.tic.cce.autoloc.service.IMaintenanceService;
 
 import java.util.List;
-
+@Service
 public class IMaintenance implements IMaintenanceService {
 
     private final MaintenanceRepository maintenanceRepository;

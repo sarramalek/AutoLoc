@@ -5,7 +5,7 @@ import tn.esprit.tic.cce.autoloc.domain.Employe;
 import tn.esprit.tic.cce.autoloc.repository.EmployeRepository;
 
 import java.util.List;
-
+@Service
 public class IEmploye implements IEmployeService {
     private final EmployeRepository employeRepository;
 

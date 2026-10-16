@@ -2,10 +2,9 @@ package tn.esprit.tic.cce.autoloc.service;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Reservation;
 import tn.esprit.tic.cce.autoloc.repository.ReservationRepository;
-import tn.esprit.tic.cce.autoloc.service.IReservationService;
 
 import java.util.List;
-
+@Service
 public class IReservation implements IReservationService {
     private final ReservationRepository reservationRepository;
 

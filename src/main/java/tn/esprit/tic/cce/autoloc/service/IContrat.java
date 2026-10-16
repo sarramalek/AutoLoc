@@ -5,6 +5,7 @@ import tn.esprit.tic.cce.autoloc.domain.Contrat;
 import tn.esprit.tic.cce.autoloc.repository.ContratRepository;
 
 import java.util.List;
+@Service
 public class IContrat implements IContratService {
   private final ContratRepository contratRepository;
     public IContrat(ContratRepository contratRepository) {
